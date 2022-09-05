@@ -18,12 +18,23 @@ public class Dataprovider {
 		return pro.getProperty(name);
 	}
 
-		@DataProvider(name = "Login")
-	public Iterator<Object[]> getEnv() throws IOException {
+	@DataProvider(name = "Login")
+	public Iterator<Object[]> loginData() throws IOException {
 		Dataprovider d = new Dataprovider();
 		ArrayList<Object[]> testdata = new ArrayList<Object[]>();
-		String mobileNumber = d.getData("MobileNumber");
+		String mobileNumber = d.getData("InvalidMobileNumber");
 		Object[] ob = { mobileNumber };
+		testdata.add(ob);
+		return testdata.iterator();
+	}
+
+	@DataProvider(name = "HomePage")
+	public Iterator<Object[]> homePageData() throws IOException {
+		Dataprovider d = new Dataprovider();
+		ArrayList<Object[]> testdata = new ArrayList<Object[]>();
+		String mobileNumber = d.getData("validMobileNumber");
+		String otp = d.getData("OTP");
+		Object[] ob = { mobileNumber, otp };
 		testdata.add(ob);
 		return testdata.iterator();
 	}

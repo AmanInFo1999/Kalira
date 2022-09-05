@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="kalira.mobile_automation.LoginTest">
+      <class name="kalira.mobile_automation.ShopingPageTest">
         <methods>
+          <include name="verifyHome" invocation-numbers="0"/>
           <include name="beforeTest"/>
-          <include name="LoginValidation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- kalira.mobile_automation.LoginTest -->
+      </class> <!-- kalira.mobile_automation.ShopingPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,27 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-27T11:59:31 IST" name="Default suite" finished-at="2022-08-27T12:00:53 IST" duration-ms="82119">
+  <suite started-at="2022-09-03T12:13:10 IST" name="Default suite" finished-at="2022-09-03T12:14:56 IST" duration-ms="106363">
     <groups>
     </groups>
-    <test started-at="2022-08-27T11:59:31 IST" name="Default test" finished-at="2022-08-27T12:00:53 IST" duration-ms="82119">
-      <class name="kalira.mobile_automation.LoginTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:kalira.mobile_automation.LoginTest@6fd83fc1]" started-at="2022-08-27T11:59:31 IST" name="beforeTest" finished-at="2022-08-27T12:00:08 IST" duration-ms="37296" status="PASS">
+    <test started-at="2022-09-03T12:13:10 IST" name="Default test" finished-at="2022-09-03T12:14:56 IST" duration-ms="106363">
+      <class name="kalira.mobile_automation.ShopingPageTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:kalira.mobile_automation.ShopingPageTest@d5b810e]" started-at="2022-09-03T12:13:10 IST" name="beforeTest" finished-at="2022-09-03T12:13:26 IST" duration-ms="15865" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="LoginValidation(java.lang.String)[pri:1, instance:kalira.mobile_automation.LoginTest@6fd83fc1]" started-at="2022-08-27T12:00:08 IST" name="LoginValidation" data-provider="Login" finished-at="2022-08-27T12:00:53 IST" duration-ms="44784" status="PASS">
+        <test-method signature="verifyHome(java.lang.String,java.lang.String)[pri:1, instance:kalira.mobile_automation.ShopingPageTest@d5b810e]" started-at="2022-09-03T12:13:26 IST" name="verifyHome" data-provider="HomePage" finished-at="2022-09-03T12:14:56 IST" duration-ms="90457" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[9319671845]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[1111]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginValidation -->
-      </class> <!-- kalira.mobile_automation.LoginTest -->
+        </test-method> <!-- verifyHome -->
+      </class> <!-- kalira.mobile_automation.ShopingPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
