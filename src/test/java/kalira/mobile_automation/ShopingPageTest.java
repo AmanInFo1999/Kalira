@@ -25,7 +25,8 @@ public class ShopingPageTest {
 		driver = initize.setup();
 	}
 
-	@Test(priority = 1, dataProvider = "HomePage", dataProviderClass = Dataprovider.class)
+	 @Test(priority = 1, dataProvider = "HomePage", dataProviderClass =
+	 Dataprovider.class)
 	@Description("TC_006 : Kalira logo should be visible on the top center."
 			+ "TC_009 : Verify user should be landing on Shop page by default, and icon color should be pink"
 			+ "TC_010 : Verify Daily new icon or text is clickable."
@@ -63,6 +64,46 @@ public class ShopingPageTest {
 		shop.verifyText(driver, "Shop");
 		shop.verifyClickText(driver, "Shop");
 		shop.verifySareeBanner(driver);
-
 	}
+
+//	@Test(priority = 2, dataProvider = "HomePage", dataProviderClass = Dataprovider.class)
+//	@Description("TC_001 : Verify that when user click on the Orders nav icon then user should be redirected to Orders screen, and menu icon should be changed from grey to pink.\r\n"
+//			+ "TC_002 : Verify that Orders text should be visible on the Top left side."
+//			+ "TC_003 : Verify that Save icon should be visible on the Top right side corner."
+//			+ "TC_004 : Verify that \"For any order related question or enquiry , reach out to us on Whatsapp or Call on: +916363209447\" text should be visible in the center as per the figma.\r\n"
+//			+ "TC_005 : Verify that Click to Start Whatsapp Chat button should be visible as per the figma."
+//			+ "TC_006 : Verify Saved header should be display when click on save button on ordes page."
+//			+ "TC_007 : Verify saved button should be clickable on orders page.")
+//	public void verifyOrders(String mobileNumber, String OTP) throws InterruptedException {
+//		WebDriverWait wait = new WebDriverWait(driver, 120);
+//		Thread.sleep(20000);
+//		CommonUtils.implicitWait(driver, 50);
+//		login.clickOnSkipButton(wait, driver);
+//		shop.verifyText(driver, "Orders");
+//		shop.verifyClickText(driver, "Orders");
+//		shop.verifyText(driver, "Orders");
+//		shop.verifySavedIcon(driver);
+//		shop.verifyText(driver, "Click to Start Whatsapp Chat");
+//		shop.verifyText(driver, "For any order related question or enquiry, reach out to us on Whatapp");
+//		shop.verifyText(driver, "Call on: +916363209447");
+//		shop.clickOnSavedIcon(driver);
+//		shop.verifyText(driver, "Saved");
+//	}
+//	@Test(priority = 2, dataProvider = "HomePage", dataProviderClass = Dataprovider.class)
+//	@Description("TC_001 : Verify that when user click on the Saved Nav bar then user should be redirected to the Saved screen."
+//			+ "TC_004 : Verify that You have not saved any products. text should be visible."
+//			+ "TC_005 : Verify that Start Shopping button should be visible as per the figma and when user click on it then user should be redirectd to the Categories screen."
+//			+ "TC_006 : Verify home page should be visible when user click on start shopping page.")
+//	public void verifySaved(String mobileNumber, String OTP) throws InterruptedException {
+//		WebDriverWait wait = new WebDriverWait(driver, 120);
+//		Thread.sleep(20000);
+//		CommonUtils.implicitWait(driver, 50);
+//		login.clickOnSkipButton(wait, driver);
+//		shop.verifyText(driver, "Saved");
+//		shop.verifyClickText(driver, "Saved");
+//		shop.verifyText(driver, "Saved");
+//		shop.verifyText(driver, "You have not saved any products.");
+//		shop.verifyText(driver, "Start Shopping");
+//		shop.verifyClickText(driver, "Start Shopping");
+//	}
 }

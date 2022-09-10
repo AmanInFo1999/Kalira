@@ -5,7 +5,7 @@
     <classes>
       <class name="kalira.mobile_automation.ShopingPageTest">
         <methods>
-          <include name="verifyHome" invocation-numbers="0"/>
+          <include name="verifySaved" invocation-numbers="0"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- kalira.mobile_automation.ShopingPageTest -->

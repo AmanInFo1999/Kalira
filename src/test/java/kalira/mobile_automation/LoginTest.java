@@ -26,8 +26,7 @@ public class LoginTest {
 		driver = initize.setup();
 	}
 
-	// @Test(priority = 1, dataProvider = "Login", dataProviderClass =
-	// Dataprovider.class)
+//	@Test(priority = 1, dataProvider = "Login", dataProviderClass = Dataprovider.class)
 	@Description("TC:009 -> Verify that the mobile number field should display the accepted format of the mobile number as the placeholder text for user assistance."
 			+ "TC : 010 -> Add a valid mobile number and verify the field should accept the correct mobile number."
 			+ "TC: 012-> Verify mobile number field should accept only the numeric value by entering alphabets and the special character"
@@ -112,7 +111,7 @@ public class LoginTest {
 		login.verifyBackButton(driver);
 		login.clickOnBackButton(driver);
 		login.verifyGetStartHeader(driver);
-		login.clickOnSkipButton(driver);
+		login.clickOnSkipButton(wait,driver);
 		Thread.sleep(3000);
 		Assert.assertTrue(driver.findElement(By.xpath("(//android.widget.ImageView)[1]")).isDisplayed());
 	}

@@ -4,6 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.appium.java_client.AppiumDriver;
@@ -65,7 +67,8 @@ public class LoginPage {
 		Assert.assertTrue(driver.findElement(By.xpath(termLink)).isDisplayed(), "Term link is not display!!");
 	}
 
-	public void clickOnSkipButton(AppiumDriver driver) {
+	public void clickOnSkipButton(WebDriverWait wait, AppiumDriver driver) {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(skipButton)));
 		CommonUtils.implicitWait(driver, 2);
 		driver.findElement(By.xpath(skipButton)).click();
 	}
@@ -151,7 +154,7 @@ public class LoginPage {
 		CommonUtils.implicitWait(driver, 2);
 		this.clickOnSendOTPButton(driver);
 		CommonUtils.implicitWait(driver, 2);
-		//this.enterOTP(driver, OTP);
+		// this.enterOTP(driver, OTP);
 		Thread.sleep(13000);
 		CommonUtils.implicitWait(driver, 4);
 		this.clickOnContniueButton(driver);

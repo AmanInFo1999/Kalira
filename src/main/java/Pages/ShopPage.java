@@ -14,10 +14,22 @@ public class ShopPage {
 
 	String sareeBanner = "(//android.widget.ImageView)[4]";
 	String kurtasetBanner = "(//android.widget.ImageView)[5]";
+	String savedIcon = "(//android.widget.ImageView)[1]";
+
+	public void verifySavedIcon(AppiumDriver driver) {
+		CommonUtils.implicitWait(driver, 2);
+		Assert.assertTrue(driver.findElement(By.xpath(savedIcon)).isDisplayed(), "Saved Icon is not display!!");
+	}
 
 	public void verifySareeBanner(AppiumDriver driver) {
 		CommonUtils.implicitWait(driver, 2);
 		Assert.assertTrue(driver.findElement(By.xpath(sareeBanner)).isDisplayed(), "Saree banner is not display!!");
+	}
+	public void clickOnSavedIcon(AppiumDriver driver) {
+		CommonUtils.implicitWait(driver, 2);
+		CommonUtils.explicitWait(driver, savedIcon);
+		driver.findElement(By.xpath(savedIcon)).click();
+		CommonUtils.implicitWait(driver, 2);
 	}
 
 	public void clickOnSareeBanner(AppiumDriver driver) {
