@@ -25,6 +25,7 @@ public class ShopPage {
 		CommonUtils.implicitWait(driver, 2);
 		Assert.assertTrue(driver.findElement(By.xpath(sareeBanner)).isDisplayed(), "Saree banner is not display!!");
 	}
+
 	public void clickOnSavedIcon(AppiumDriver driver) {
 		CommonUtils.implicitWait(driver, 2);
 		CommonUtils.explicitWait(driver, savedIcon);
@@ -63,4 +64,38 @@ public class ShopPage {
 		driver.findElement(By.xpath("//android.widget.TextView[contains(@text, '" + text + "')]")).click();
 		CommonUtils.implicitWait(driver, 2);
 	}
+
+	String shareIcon = "(//android.widget.ImageView)[5]";
+	String filterIcon = "(//android.widget.ImageView)[4]";
+	String savedIconProductPage = "(//android.widget.ImageView)[6]";
+	String orderOnWhatsapp = "(//android.widget.ImageView)[8]";
+
+	public void verifyShareIcon(AppiumDriver driver) {
+		CommonUtils.implicitWait(driver, 2);
+		Assert.assertTrue(driver.findElement(By.xpath(shareIcon)).isDisplayed(), "ShareIcon is not display!!");
+	}
+
+	public void verifyOrderOnWhatsapp(AppiumDriver driver) {
+		CommonUtils.implicitWait(driver, 2);
+		Assert.assertTrue(driver.findElement(By.xpath(orderOnWhatsapp)).isDisplayed(),
+				"orderOnWhatsapp button is not display!!");
+	}
+
+	public void verifysavedIconProductPage(AppiumDriver driver) {
+		CommonUtils.implicitWait(driver, 2);
+		Assert.assertTrue(driver.findElement(By.xpath(savedIconProductPage)).isDisplayed(),
+				"SavedIcon is not display!!");
+	}
+
+	public void clickOnFilterIcon(AppiumDriver driver) throws InterruptedException {
+		CommonUtils.implicitWait(driver, 2);
+		Thread.sleep(3000);
+		CommonUtils.explicitWait(driver, filterIcon);
+		driver.findElement(By.xpath(filterIcon)).click();
+		CommonUtils.implicitWait(driver, 2);
+	}
+
 }
+//Cotton Mul-Mul Saree
+//₹ 1099/-
+//Size: Free Size
